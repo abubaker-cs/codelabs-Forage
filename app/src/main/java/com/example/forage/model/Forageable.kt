@@ -20,6 +20,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 /**
+ * FILE 01
+ *
  * Forageable entity to be stored in the forageable_database.
  */
 // TO DO: annotate this data class as an entity with a parameter for the table name
