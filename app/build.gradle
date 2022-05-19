@@ -55,6 +55,7 @@ android {
         dataBinding true
         viewBinding true
     }
+    namespace 'com.example.forage'
 }
 
 dependencies {
