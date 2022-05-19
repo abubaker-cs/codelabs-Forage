@@ -34,7 +34,7 @@ import com.example.forage.ui.viewmodel.ForageableViewModelFactory
 
 /**
  * A fragment to enter data for a new [Forageable] or edit data for an existing [Forageable].
- * [Forageable]s can be saved or deleted from this fragment.
+ * [Forageable]s can be saved or deleted from this fragment .
  */
 class AddForageableFragment : Fragment() {
 
