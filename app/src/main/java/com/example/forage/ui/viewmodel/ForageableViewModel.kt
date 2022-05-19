@@ -15,10 +15,7 @@
  */
 package com.example.forage.ui.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.forage.data.ForageableDao
 import com.example.forage.model.Forageable
 import kotlinx.coroutines.Dispatchers
@@ -105,6 +102,30 @@ class ForageableViewModel(private val forageableDao: ForageableDao) : ViewModel(
     }
 }
 
-// TODO: create a view model factory that takes a ForageableDao as a property and
+// TO DO: create a view model factory that takes a ForageableDao as a property and
 //  creates a ForageableViewModel
+// To instantiate the ForageableViewModel instance
+// ==============================================
+// 1. Pass in the same constructor parameter as the ForageableViewModel that is the ItemDao instance.
+// 2. Extend the class from the ViewModelProvider.Factory class.
+class ForageableViewModelFactory(private val forageableDao: ForageableDao) :
+    ViewModelProvider.Factory {
 
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+
+        // Check if the modelClass is the same as the InventoryViewModel class
+        if (modelClass.isAssignableFrom(ForageableViewModel::class.java)) {
+
+            // Return an instance of it
+            @Suppress("UNCHECKED_CAST")
+            return ForageableViewModel(forageableDao) as T
+
+        }
+
+        // Otherwise, throw an exception.
+        throw IllegalArgumentException("Unknown ViewModel class")
+
+    }
+
+
+}
