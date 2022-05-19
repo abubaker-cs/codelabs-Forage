@@ -16,7 +16,6 @@
 package com.example.forage.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.forage.data.ForageableDao
 import com.example.forage.model.Forageable
@@ -29,9 +28,7 @@ import kotlinx.coroutines.launch
  */
 
 // TODO: pass a ForageableDao value as a parameter to the view model constructor
-class ForageableViewModel(
-    // Pass dao here
-): ViewModel() {
+class ForageableViewModel : ViewModel() {
 
     // TODO: create a property to set to a list of all forageables from the DAO
 
@@ -51,7 +48,7 @@ class ForageableViewModel(
             notes = notes
         )
 
-    // TODO: launch a coroutine and call the DAO method to add a Forageable to the database within it
+        // TODO: launch a coroutine and call the DAO method to add a Forageable to the database within it
 
     }
 
