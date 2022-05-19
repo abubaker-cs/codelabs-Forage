@@ -19,6 +19,8 @@ import androidx.room.RoomDatabase
 import com.example.forage.model.Forageable
 
 /**
+ * FILE 04
+ *
  * Room database to persist data for the Forage app.
  * This database stores a [Forageable] entity
  */
