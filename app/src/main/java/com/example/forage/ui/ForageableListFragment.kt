@@ -36,7 +36,7 @@ import com.example.forage.ui.viewmodel.ForageableViewModelFactory
  */
 class ForageableListFragment : Fragment() {
 
-    // TODO: Refactor the creation of the view model to take an instance of
+    // TO DO: Refactor the creation of the view model to take an instance of
     //  ForageableViewModelFactory. The factory should take an instance of the Database retrieved
     //  from BaseApplication
     private val viewModel: ForageableViewModel by activityViewModels {
