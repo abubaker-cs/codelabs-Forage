@@ -83,12 +83,15 @@ class ForageableListFragment : Fragment() {
         }
 
         binding.apply {
+
             recyclerView.adapter = adapter
+
             addForageableFab.setOnClickListener {
                 findNavController().navigate(
                     R.id.action_forageableListFragment_to_addForageableFragment
                 )
             }
+
         }
     }
 }
