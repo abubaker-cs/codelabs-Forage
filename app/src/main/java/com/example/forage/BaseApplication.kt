@@ -28,7 +28,7 @@ class BaseApplication : Application() {
 
     // TO DO: provide a ForageDatabase value by lazy here
     // Use lazy delegate so the instance database is lazily created when you first need/access the
-    // reference (rather than when the app starts).
+    // reference (rather than when the app starts) .
     val database: ForageDatabase by lazy {
 
         //  Instantiate the database instance by calling getDatabase() on ForageDatabase passing in the context
