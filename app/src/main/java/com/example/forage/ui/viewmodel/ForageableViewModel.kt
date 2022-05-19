@@ -56,7 +56,14 @@ class ForageableViewModel(private val forageableDao: ForageableDao) : ViewModel(
             notes = notes
         )
 
-        // TODO: launch a coroutine and call the DAO method to add a Forageable to the database within it
+        // TO DO: launch a coroutine and call the DAO method to add a Forageable to the database within it
+        // Launching a new coroutine to insert an item in a non-blocking way
+        viewModelScope.launch {
+
+            // Add the new entity to the database
+            forageableDao.insert(forageable)
+
+        }
 
     }
 
@@ -75,14 +82,22 @@ class ForageableViewModel(private val forageableDao: ForageableDao) : ViewModel(
             notes = notes
         )
         viewModelScope.launch(Dispatchers.IO) {
-            // TODO: call the DAO method to update a forageable to the database here
+
+            // TO DO: call the DAO method to update a forageable to the database here
+            forageableDao.update(forageable)
+
         }
     }
 
     fun deleteForageable(forageable: Forageable) {
+
         viewModelScope.launch(Dispatchers.IO) {
-            // TODO: call the DAO method to delete a forageable to the database here
+
+            // TO DO: call the DAO method to delete a forageable to the database here
+            forageableDao.delete(forageable)
+
         }
+
     }
 
     fun isValidEntry(name: String, address: String): Boolean {
@@ -92,3 +107,4 @@ class ForageableViewModel(private val forageableDao: ForageableDao) : ViewModel(
 
 // TODO: create a view model factory that takes a ForageableDao as a property and
 //  creates a ForageableViewModel
+
