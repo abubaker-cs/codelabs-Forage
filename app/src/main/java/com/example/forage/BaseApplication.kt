@@ -22,8 +22,20 @@ import com.example.forage.data.ForageDatabase
  * An application class that inherits from [Application], allows for the creation of a singleton
  * instance of the [ForageDatabase]
  */
+
+// We will instantiate the database instance in the Application class
 class BaseApplication : Application() {
 
-    // TODO: provide a ForageDatabase value by lazy here
+    // TO DO: provide a ForageDatabase value by lazy here
+    // Use lazy delegate so the instance database is lazily created when you first need/access the
+    // reference (rather than when the app starts).
+    val database: ForageDatabase by lazy {
+
+        //  Instantiate the database instance by calling getDatabase() on ForageDatabase passing in the context
+        ForageDatabase.getDatabase(this)
+
+    }
 
 }
+
+//  This will create the database (the physical database on the disk) on the first access.
