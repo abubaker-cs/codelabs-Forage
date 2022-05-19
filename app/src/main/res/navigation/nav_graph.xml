@@ -31,6 +31,7 @@
             android:id="@+id/action_forageableListFragment_to_forageableDetailFragment"
             app:destination="@id/forageableDetailFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/addForageableFragment"
         android:name="com.example.forage.ui.AddForageableFragment"
@@ -44,6 +45,7 @@
             app:argType="long"
             android:defaultValue="0L" />
     </fragment>
+
     <fragment
         android:id="@+id/forageableDetailFragment"
         android:name="com.example.forage.ui.ForageableDetailFragment"
