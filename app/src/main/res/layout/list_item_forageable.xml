@@ -24,6 +24,7 @@
             name="forageable"
             type="com.example.forage.model.Forageable"
             />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
