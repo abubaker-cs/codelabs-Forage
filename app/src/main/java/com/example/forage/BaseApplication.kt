@@ -19,6 +19,8 @@ import android.app.Application
 import com.example.forage.data.ForageDatabase
 
 /**
+ * File 05
+ *
  * An application class that inherits from [Application], allows for the creation of a singleton
  * instance of the [ForageDatabase]
  */
